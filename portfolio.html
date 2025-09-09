@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Ian Theodore Jesalva</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html" class="active">Portfolio</a>
+    <a href="models.html">3D Models</a>
+    <a href="certificates.html">Certificates</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>My Projects</h2>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="filterProjects('awarded')">🏆 Awarded & Defended</button>
+      <button class="tab-btn" onclick="filterProjects('completed')">✅ Completed</button>
+    </div>
+
+    <div id="awarded" class="projects-grid">
+  <div class="card" onclick="showDetails('GSM Based Emergency Kit','LCD + 3 buttons to send GSM emergency alerts & make calls. \n🏆 Regional Competition Champion.')">
+    <img src="images/gsm-kit.jpg" alt="GSM Based Emergency Kit">
+    <h4>GSM Based Emergency Kit</h4>
+    <p>Emergency system using GSM + buttons.</p>
+  </div>
+
+  <div class="card" onclick="showDetails('Solar Microplastic Collector','Uses water pumps and solar power to collect microplastics. \n🥇 Best in Research Paper \n🥇 Oral Presentation \n🥇 Overall 1st Place.')">
+    <img src="images/solar-microplastic.jpg" alt="Solar Microplastic Collector">
+    <h4>Solar Microplastic Collector</h4>
+    <p>Eco robot with solar & pumps.</p>
+  </div>
+
+  <div class="card" onclick="showDetails('Cane for the Blind','Arduino-powered smart cane with schematic and 3D model. \n🥇 Best in Paper.')">
+    <img src="images/cane-blind.jpg" alt="Cane for the Blind">
+    <h4>Cane for the Blind</h4>
+    <p>Assistive device for blind navigation.</p>
+  </div>
+
+  <div class="card" onclick="showDetails('Coffee Bean Storage','ESP32 + sensors monitor coffee bean storage. \n📘 Thesis Defended & Bookbound.')">
+    <img src="images/coffee-storage.jpg" alt="Coffee Bean Storage">
+    <h4>Coffee Bean Storage</h4>
+    <p>Smart environment monitoring system.</p>
+  </div>
+
+  <div class="card" onclick="showDetails('Water Hyacinth Harvester','Installable conveyor machine for boats. \n🏅 Best in Thesis.')">
+    <img src="images/hyacinth-harvester.jpg" alt="Water Hyacinth Harvester">
+    <h4>Water Hyacinth Harvester</h4>
+    <p>Environmental cleanup machine.</p>
+  </div>
+</div>
+
+
+<div id="completed" class="projects-grid" style="display: none;">
+  <div class="card" onclick="showDetails('Posture Tracking Device', 'A Wemos ESP8266 based system designed to track back posture and give alerts when posture is incorrect.')">
+    <img src="images/posture-tracker.jpg" alt="Posture Tracking Device">
+    <h4>Posture Tracking Device</h4>
+    <p>Back posture correction system.</p>
+  </div>
+
+  <div class="card" onclick="showDetails('IoT Fish Feeder', 'An ESP32-controlled automatic fish feeder that dispenses food based on schedule and can be remotely monitored.')">
+    <img src="images/fish-feeder.jpg" alt="IoT Fish Feeder">
+    <h4>IoT Fish Feeder</h4>
+    <p>Automated fish feeding system.</p>
+  </div>
+
+  <div class="card" onclick="showDetails('Farm System with Image Classification', 'Uses Arduino and camera classification to identify crop health and manage irrigation.')">
+    <img src="images/farm-system.jpg" alt="Farm System with Image Classification">
+    <h4>Farm System (Image Classification)</h4>
+    <p>Crop health and irrigation tool.</p>
+  </div>
+
+  <div class="card" onclick="showDetails('Flood Monitoring System', 'A GSM and Arduino-based system that sends flood alerts via SMS during rising water levels.')">
+    <img src="images/flood-monitoring.jpg" alt="Flood Monitoring System">
+    <h4>Flood Monitoring System</h4>
+    <p>Flood alert with GSM messaging.</p>
+  </div>
+
+  <div class="card" onclick="showDetails('Vitals Monitoring with Datalogger', 'Arduino-powered system that logs and monitors heart rate, temperature, and other vitals.')">
+    <img src="images/vitals-monitor.jpg" alt="Vitals Monitoring System">
+    <h4>Vitals Monitoring System</h4>
+    <p>Health monitoring + datalogging.</p>
+  </div>
+
+  <div class="card" onclick="showDetails('Medical Waste Collector Robot', 'Wheeled robot with ESP32-CAM for navigation and medical waste pickup in controlled environments.')">
+    <img src="images/medical-robot.jpg" alt="Medical Waste Collector Robot">
+    <h4>Medical Waste Collector Robot</h4>
+    <p>ESP32-CAM mobile robot.</p>
+  </div>
+
+  <div class="card" onclick="showDetails('Robot with MPU6050', 'Wheeled robot with balance/stability feedback using MPU6050 gyroscope.')">
+    <img src="images/mpu6050-robot.jpg" alt="MPU6050 Stability Robot">
+    <h4>MPU6050 Stability Robot</h4>
+    <p>Self-balancing robot.</p>
+  </div>
+
+  <div class="card" onclick="showDetails('Soft Robot Pump Control', 'A pneumatic soft robot controlled by Arduino for assisting persons with motor impairments.')">
+    <img src="images/soft-robot.jpg" alt="Soft Robot Pump Control">
+    <h4>Soft Robot Pump Control</h4>
+    <p>Pneumatic grip assist robot.</p>
+  </div>
+</div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ian Theodore Jesalva</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" src="" alt="Preview" style="max-width:100%; max-height:400px; display:none; margin:1rem 0; border-radius:10px;">
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+</body>
+</html>

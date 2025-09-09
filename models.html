@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Models | Ian Theodore Jesalva</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="models.html" class="active">3D Models</a>
+    <a href="certificates.html">Certificates</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section id="models">
+  <h2>🧩 My 3D Models</h2>
+  <div class="projects-grid">
+    <div class="card" onclick="showDetails('GSM Based Emergency Kit', 'GSM based system enclosed in IP65 waterproof enclosure', 'images/gsm-3dmodel.jpg')">
+  <img src="images/gsm-3dmodel.jpg" alt="GSM Based Emergency Kit">
+  <h4>GSM Based Emergency Kit</h4>
+  <p><strong>Sketchup</strong> - Emergency and Storage Device.</p>
+</div>
+
+    <div class="card" onclick="showDetails('Smart Cane Model', '3D printed model designed in Sketchup for our Arduino-based cane for the blind.', 'images/cane-model.jpg')">
+      <img src="images/cane-model.jpg" alt="Smart Cane 3D Model">
+      <h4>Smart Cane Model</h4>
+      <p><strong>Sketchup</strong> - Assistive device model.</p>
+    </div>
+
+    <div class="card" onclick="showDetails('Wheeled Robot 3D', '3D layout of a simple wheeled robot for pick and place of trash.', 'images/Wheeled-robot.jpg')">
+      <img src="images/Wheeled-robot.jpg" alt="Harvester Model">
+      <h4>Wheeled Robot</h4>
+      <p><strong>Sketchup</strong> - 3d designed wheeled robot for pick and place</p>
+    </div>
+
+    <div class="card" onclick="showDetails('Soft Robot Control System', 'A pneumatic soft robot controlled by Arduino for assisting persons with motor impairments.', 'images/softrobotenclosure.jpg')">
+      <img src="images/softrobotenclosure.jpg" alt="PCB Enclosure Model">
+      <h4>Soft Robot Control System</h4>
+      <p><strong>Sketchup</strong> - Electrical Enclosure for pneumatic and electronic system</p>
+    </div>
+
+    <div class="card" onclick="showDetails('Human Motion Mimicking Robot', '3D layout of wheeled robot for human motion mimicking application.  ', 'images/humanmimick.jpg')">
+      <img src="images/humanmimick.jpg" alt="PCB Enclosure Model">
+      <h4>Human Motion Mimicking Robot</h4>
+      <p><strong>Sketchup</strong> - MPU6050 Based Wheeled robot that tracks human motion</p>
+    </div>
+
+    <div class="card" onclick="showDetails('Coffee Bean Control System', '3D layout of control system for temperature, humidity, and moisture monitoring of coffee beans storage.', 'images/cofeebean3dmodel.jpg')">
+      <img src="images/cofeebean3dmodel.jpg" alt="PCB Enclosure Model">
+      <h4>Coffee Bean Control System</h4>
+      <p><strong>Solidworks</strong> - Electrical Enclosure for electronic systems and sensors attachment</p>
+    </div>
+
+    <div class="card" onclick="showDetails('Microalgae Production System', '3D layout of control system for monitoring of green color, temperature, and automation of microalgae production.', 'images/microalgaemodel.jpg')">
+      <img src="images/microalgaemodel.jpg" alt="PCB Enclosure Model">
+      <h4>Microalgae Production System</h4>
+      <p><strong>Sketchup</strong> - Overall assembly with electrical enclosure for modules and power supply</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Ian Theodore Jesalva</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" src="" alt="Preview" style="max-width:100%; max-height:400px; display:none; margin:1rem 0; border-radius:10px;">
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+</body>
+</html>
